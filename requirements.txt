@@ -1,0 +1,7 @@
+pdfminer.six
+python-magic
+Pillow
+python-docx
+pytesseract
+pycryptodome
+tabulate
