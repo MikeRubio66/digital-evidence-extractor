@@ -1,15 +1,22 @@
 # Digital Evidence Extractor
-Herramienta Python para extracción forense de archivos: metadatos, texto, hashes y registro en SQLite.
+
+Herramienta forense en Python para extraer metadatos, texto, thumbnails y hashes (SHA256) de archivos digitales. Registra evidencia en SQLite y exporta JSON para reportes periciales.
 
 ## Características
-- Extrae texto de PDFs (pdfminer)
-- Extrae thumbnails de imágenes
-- Calcula hashes SHA256
-- Registra evidencias en SQLite y exporta JSON
+- Extracción de texto parcial de PDFs.
+- Cálculo de hash SHA256.
+- Registro en base SQLite `evidence.db`.
+- Generación de miniaturas para imágenes.
+- CLI simple para analizar archivos individuales.
 
 ## Requisitos
-Python 3.10+
+- Python 3.10+
+- Tesseract instalado en el sistema si quieres OCR (opcional).
+
+## Instalación
+```bash
+python -m venv venv
+source venv/bin/activate   # linux/mac
+venv\Scripts\activate      # windows
 pip install -r requirements.txt
 
-## Uso
-./run.sh samples/sample.pdf
