@@ -20,6 +20,11 @@ source venv/bin/activate   # linux/mac
 venv\Scripts\activate      # windows
 pip install -r requirements.txt
 
+docker build -t digital-evidence-extractor:latest .
+docker run --rm -v $(pwd)/samples:/app/samples digital-evidence-extractor:latest python -m extractor.extractor samples/sample.txt
+
+pytest -q
+
 # Ejecutable
 chmod +x run.sh
 ./run.sh samples/sample.txt
