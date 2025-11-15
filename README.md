@@ -20,3 +20,9 @@ source venv/bin/activate   # linux/mac
 venv\Scripts\activate      # windows
 pip install -r requirements.txt
 
+# Ejecutable
+chmod +x run.sh
+./run.sh samples/sample.txt
+
+# O directamente con python
+python -m extractor.extractor samples/sample.txt
